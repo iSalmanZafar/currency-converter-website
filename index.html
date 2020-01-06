@@ -4,42 +4,87 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/simplex/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Currency Converter</title>
   </head>
   <body>
     <div class="container">
-      <form id="currency-form">
-        <div class="form-group">
-          <label for="from-currency">From:</label>
-          <select
-            name="from-currency-select"
-            id="from-currency-select"
-            class="select-currency"
-          >
-            <option value="USD">United States Dollar</option>
-            <option value="PKR">Pakistani Rupee</option>
-            <option value="INR">Indian Rupee</option>
-          </select>
-          <input type="number" name="amount" id="amount" value="1" />
+      <div class="row">
+        <div
+          class="col wrapper d-flex flex-column justify-content-start align-items-center"
+        >
+          <h1 class="display-4 my-5 text-primary text-center">
+            Currency Converter
+          </h1>
+          <form id="currency-form pt-4">
+            <div class="form-group">
+              <label for="from-currency">From:</label>
+              <select
+                name="from-currency-select"
+                id="from-currency-select"
+                class="select-currency form-control"
+              >
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="amount">Amount:</label>
+              <input
+                type="number"
+                name="amount"
+                id="amount"
+                value="1"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="to-currency">To: </label>
+              <select
+                name="to-currency-select"
+                id="to-currency-select"
+                class="select-currency form-control"
+              >
+              </select>
+            </div>
+            <button
+              type="submit"
+              id="convert"
+              class="btn btn-primary form-control mt-4"
+            >
+              Convert
+            </button>
+          </form>
+          <div class="card mt-5">
+            <div class="card-header">
+              Result:
+            </div>
+            <div
+              id="output"
+              class="card-body text-center font-weight-bold"
+            ></div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="to-currency">To: </label>
-          <select
-            name="to-currency-select"
-            id="to-currency-select"
-            class="select-currency"
-          >
-            <option value="USD">United States Dollar</option>
-            <option value="PKR">Pakistani Rupee</option>
-            <option value="INR">Indian Rupee</option>
-          </select>
-        </div>
-        <button type="submit" id="convert">Convert</button>
-      </form>
-      <div id="output"></div>
+      </div>
     </div>
 
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
     <script src="main.js"></script>
   </body>
 </html>
